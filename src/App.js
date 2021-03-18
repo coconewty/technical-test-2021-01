@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Srikethrough, TitleBox } from './styles'
+import SimpleCaesarCipher from './SimpleCaesarCipher'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <header className="App-header">
+      <TitleBox>
+        <h1 className="App-title">
+          Welcome to <Srikethrough>React</Srikethrough> Caesar Cipher
+        </h1>
+      </TitleBox>
+    </header>
+    <SimpleCaesarCipher />
+  </div>
+)
 
-export default App;
+export default App
